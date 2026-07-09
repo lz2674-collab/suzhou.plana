@@ -53,8 +53,8 @@ export default function Home() {
   const aboutServices = ["AI视觉营销", "原创IP开发", "商业短片", "活动影像", "内容营销"];
   const aboutExplorations = ["AI 原生内容", "电影级叙事", "原创 IP", "交互体验", "生成式设计", "虚拟制作"];
   const clientLogos = [
-    { name: "TikTok", logo: r2("/logos/tiktok.png") },
-    { name: "YouTube", logo: r2("/logos/youtube.png") },
+    { name: "TikTok", logo: "/logos/TikTok_logo.svg" },
+    { name: "YouTube", logo: "/logos/YouTube_2024.svg" },
     { name: "Meta", logo: r2("/logos/meta.png") },
     { name: "Kwai", logo: r2("/logos/kwai.png") },
     { name: "小红书", logo: r2("/logos/xiaohongshu.png") },
@@ -63,7 +63,7 @@ export default function Home() {
     { name: "ReelShort", logo: r2("/logos/reelshort.png"), display: "iconCompact" },
     { name: "DramaBox", logo: r2("/logos/dramabox.png"), display: "icon" },
     { name: "红果", logo: r2("/logos/hongguo.png"), display: "iconCompact" },
-    { name: "Bilibili", logo: r2("/logos/Bilibili_logo.svg") },
+    { name: "Bilibili", logo: "/logos/Bilibili_logo.svg" },
     { name: "爱奇艺", logo: r2("/logos/iqiyi.png"), display: "large" },
     { name: "Tencent", logo: r2("/logos/tencent-display.png"), display: "xlarge" },
     { name: "DramaWave", logo: r2("/logos/dramawave.png"), display: "icon" },
