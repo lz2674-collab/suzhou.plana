@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect, useRef, useState, type PointerEvent, type WheelEvent } from "react";
 import PageTransition from "../components/PageTransition";
 import { works } from "../data/works";
@@ -83,9 +83,9 @@ export default function CaseStudy() {
     <PageTransition>
       <section className="case-hero">
         <img src={work.coverLandscape ?? work.cover} alt={work.title} />
-        <a className="case-back-link" href="/works">
+        <Link className="case-back-link" to="/works">
           ← 返回作品
-        </a>
+        </Link>
         <div className="case-hero-copy container">
           <span>{work.categoryLabel}</span>
           <h1>{work.title}</h1>
