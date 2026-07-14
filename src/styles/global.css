@@ -2634,8 +2634,10 @@ img {
 
   .hero {
     min-height: 100svh;
-    padding-top: 190px;
-    padding-bottom: 92px;
+    min-height: 100dvh;
+    align-items: flex-start;
+    padding-top: clamp(118px, 18svh, 156px);
+    padding-bottom: clamp(72px, 12svh, 104px);
   }
 
   .hero-copy {
@@ -2644,8 +2646,9 @@ img {
   }
 
   .hero-bg {
-    object-position: 66% center;
-    opacity: 0.48;
+    object-fit: contain;
+    object-position: center 38%;
+    opacity: 0.62;
   }
 
   .hero:hover .hero-bg {
@@ -2654,16 +2657,17 @@ img {
 
   .hero-wash {
     background:
-      radial-gradient(circle at 68% 40%, transparent 0 24%, rgba(0, 0, 0, 0.12) 74%),
-      linear-gradient(90deg, #f7f7f5 0%, rgba(247, 247, 245, 0.88) 52%, rgba(247, 247, 245, 0.34) 100%);
+      linear-gradient(180deg, rgba(247, 247, 245, 0.92) 0%, rgba(247, 247, 245, 0.62) 34%, rgba(247, 247, 245, 0.18) 64%, rgba(247, 247, 245, 0.82) 100%),
+      radial-gradient(circle at 50% 38%, transparent 0 38%, rgba(0, 0, 0, 0.1) 78%);
   }
 
   .hero-content {
-    transform: translateY(-6vh);
+    transform: none;
   }
 
   .hero h1 {
     font-size: clamp(24px, 7vw, 34px);
+    white-space: normal;
   }
 
   .hero-label {
@@ -2760,15 +2764,22 @@ img {
 
   .hero-typography {
     left: 50%;
-    bottom: -2vh;
-    width: 98vw;
-    max-width: 98vw;
+    bottom: max(8px, env(safe-area-inset-bottom));
+    width: 92vw;
+    max-width: 92vw;
     transform: translateX(-50%);
   }
 
   .work-hero-preview {
-    height: 68vh;
-    min-height: 500px;
+    height: 100svh;
+    height: 100dvh;
+    min-height: 0;
+  }
+
+  .work-hero-bg,
+  .case-hero img {
+    object-fit: contain;
+    object-position: center top;
   }
 
   .work-hero-copy {
@@ -2853,7 +2864,8 @@ img {
     grid-template-columns: 1fr;
     grid-template-rows: minmax(0, 1fr) 230px;
     gap: 14px;
-    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
     padding-top: 96px;
   }
 
@@ -2890,6 +2902,19 @@ img {
   .section-heading {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+
+  .section-heading h2,
+  .page-hero h1,
+  .group-title h2,
+  .group-title h3,
+  .case-hero-copy h1 {
+    white-space: normal;
+  }
+
+  .case-hero {
+    min-height: 100svh;
+    min-height: 100dvh;
   }
 
   .works-showcase {
