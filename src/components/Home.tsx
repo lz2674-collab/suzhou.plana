@@ -5,7 +5,6 @@ import PageTransition from "../components/PageTransition";
 import SideIndex from "../components/SideIndex";
 import WorkSection from "../components/WorkSection";
 import Reveal from "../components/Reveal";
-import MobileScaledCanvas from "../components/MobileScaledCanvas";
 import { aiPlaceholderWorks, works, type Work, type WorkSection as WorkSectionType } from "../data/works";
 import { stats } from "../data/stats";
 
@@ -77,8 +76,7 @@ export default function Home() {
 
   return (
     <PageTransition>
-      <MobileScaledCanvas className="mobile-canvas-hero">
-        <section className="hero">
+      <section className="hero">
           <motion.video
             className="hero-bg"
             autoPlay
@@ -111,11 +109,9 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
-        </section>
-      </MobileScaledCanvas>
+      </section>
 
-      <MobileScaledCanvas className="mobile-canvas-works">
-        <motion.section
+      <motion.section
           className="works-showcase"
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -150,11 +146,9 @@ export default function Home() {
             </Reveal>
           </motion.div>
           </div>
-        </motion.section>
-      </MobileScaledCanvas>
+      </motion.section>
 
-      <MobileScaledCanvas className="mobile-canvas-company">
-        <section className="company-band">
+      <section className="company-band">
           <div className="about-editorial container">
           <section className="about-collage-section">
             <div className="about-gallery-wall" aria-hidden="true" />
@@ -238,8 +232,7 @@ export default function Home() {
             </div>
           </Reveal>
           </div>
-        </section>
-      </MobileScaledCanvas>
+      </section>
     </PageTransition>
   );
 }

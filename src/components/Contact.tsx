@@ -1,5 +1,4 @@
 import PageTransition from "../components/PageTransition";
-import MobileScaledCanvas from "../components/MobileScaledCanvas";
 import { type FormEvent, useMemo, useState } from "react";
 
 const projectTypes = [
@@ -75,8 +74,7 @@ export default function Contact() {
 
   return (
     <PageTransition>
-      <MobileScaledCanvas className="mobile-canvas-contact">
-        <section className="contact-page container">
+      <section className="contact-page container">
           <div>
             <span>Contact</span>
             <h1>让我们从一个创意开始。</h1>
@@ -120,8 +118,7 @@ export default function Contact() {
               {status === "loading" ? "提交中..." : "提交咨询"}
             </button>
           </form>
-        </section>
-      </MobileScaledCanvas>
+      </section>
     </PageTransition>
   );
 }
